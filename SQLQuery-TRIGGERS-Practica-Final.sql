@@ -7,11 +7,11 @@ on Pelicula
 after update
 as
 begin
-Insert into Log_Pelicula (iID_PeliculaL, dFecha, vDescripciÛn)
-Select iID_Pelicula, GETDATE(), 'Se realizÛ una actualizaciÛn en la tabla Pelicula'
+Insert into Log_Pelicula (iID_PeliculaL, dFecha, vDescripci√≥n)
+Select iID_Pelicula, GETDATE(), 'Se realiz√≥ una actualizaci√≥n en la tabla Pelicula'
 From Inserted
 
-print 'Se realizÛ una actualizaciÛn en la tabla Pelicula'
+print 'Se realiz√≥ una actualizaci√≥n en la tabla Pelicula'
 end
 
 Update Pelicula Set mPrecio = 130
@@ -31,7 +31,7 @@ begin
 	Select 'Invalido','Invalido'
 	From Inserted
 
-	print 'NO se puden agregar m·s sucursales en la tabla Sucursal'
+	print 'NO se puden agregar m√°s sucursales en la tabla Sucursal'
 end
 
 Insert into Sucursal Values ('Cumbres de la fe','Southa #656, Col. Roble')
@@ -48,10 +48,10 @@ begin
 	Select *
 	from deleted
 
-	print 'NO se puden agregar m·s sucursales en la tabla Sucursal'
+	print 'Error al intentar eliminar un registro en la tabla Genero'
 end
 
 Delete from Genero 
-Where vGenero = 'AcciÛn'
+Where vGenero = 'Acci√≥n'
 
 Select * from Genero
